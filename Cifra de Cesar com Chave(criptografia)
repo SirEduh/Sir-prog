@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	char msg[999];
+	char crip_msg[999];
+	int tam_msg;
+	int i;
+	int c;
+	
+	printf("Informe a chave: \n");
+	scanf("%i%*c",&c);
+	
+	printf("\nDigite o texto ou palavra a ser criptografado: ");
+	gets(msg);
+	tam_msg = strlen(msg);
+	
+	for (i=0; i<=tam_msg; i++){
+		crip_msg[i] = msg[i] + c;
+	}
+		crip_msg[i-1] = '\0';
+	
+	printf("\nA mensagem criptografada e: %s\n\n", crip_msg);
+	system("pause");
+}
